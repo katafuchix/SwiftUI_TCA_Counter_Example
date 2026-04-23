@@ -6,19 +6,37 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
+// MARK: - View
 struct ContentView: View {
+    // 4. Store: State・Action・Reducer をつなぐ
+    let store: StoreOf<CounterFeature>
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 20) {
+            Text("\(store.count)")
+                .font(.system(size: 64, weight: .medium))
+
+            HStack(spacing: 16) {
+                Button("−") {
+                    store.send(.decrementButtonTapped)
+                }
+                .font(.title)
+
+                Button("+") {
+                    store.send(.incrementButtonTapped)
+                }
+                .font(.title)
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(
+        store: Store(initialState: CounterFeature.State()) {
+            CounterFeature()
+        }
+    )
 }

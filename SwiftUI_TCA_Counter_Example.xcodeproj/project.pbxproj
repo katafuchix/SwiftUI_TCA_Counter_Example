@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3169A43D2F99E4CA007E135A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 3169A43C2F99E4CA007E135A /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3169A2C32F99E1A4007E135A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3169A43D2F99E4CA007E135A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = SwiftUI_TCA_Counter_Example;
 			packageProductDependencies = (
+				3169A43C2F99E4CA007E135A /* ComposableArchitecture */,
 			);
 			productName = SwiftUI_TCA_Counter_Example;
 			productReference = 3169A2B52F99E1A2007E135A /* SwiftUI_TCA_Counter_Example.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 3169A2AC2F99E1A2007E135A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3169A43B2F99E4CA007E135A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3169A2B62F99E1A2007E135A /* Products */;
 			projectDirPath = "";
@@ -578,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3169A43B2F99E4CA007E135A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.25.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3169A43C2F99E4CA007E135A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3169A43B2F99E4CA007E135A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3169A2AD2F99E1A2007E135A /* Project object */;
 }
