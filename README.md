@@ -53,4 +53,13 @@ Store(initialState: CounterFeature.State()) {
                          [Effect]
                          (API通信など)
 ```
-                         
+
+| メリット | 説明 | 
+|:-----------|------------:|
+| テストしやすい    | StateとActionが明確なので、ロジックのユニットテストが書きやすい| 
+| 単方向データフロー    | View → Action → Reducer → State → View の流れが明確| 
+| モジュール分割    | 大きなアプリを小さなReducerに分割して合成できる| 
+| デバッグしやすい    | 状態変化の追跡が容易|
+
+
+
