@@ -45,3 +45,12 @@ Store(initialState: CounterFeature.State()) {
   CounterFeature()
 }
 ```
+
+### データフローのイメージ
+```
+[View] ---(Action)---> [Store/Reducer] ---(新しいState)---> [View]
+                              |
+                         [Effect]
+                         (API通信など)
+```
+                         
