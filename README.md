@@ -53,6 +53,7 @@ Store(initialState: CounterFeature.State()) {
                          [Effect]
                          (API通信など)
 ```
+- Effect = Reducerの外側で起きる処理を返すもの, 具体的には return .run { } で返すものが全部Effect
 
 | メリット |説明 | 
 |:-----------|:------------|
