@@ -61,5 +61,24 @@ Store(initialState: CounterFeature.State()) {
 | モジュール分割    |大きなアプリを小さなReducerに分割して合成できる| 
 | デバッグしやすい    |状態変化の追跡が容易|
 
+### MVVMとの違い
+
+```
+// MVVMは自由すぎる
+class ViewModel {
+    var count = 0
+
+    func increment() { count += 1 }
+    func decrement() { count -= 1 }
+    func reset() { count = 0 }
+    // どこからでも count を直接変更できてしまう
+}
+
+// TCAは必ずActionを通す
+case .incrementTapped: state.count += 1
+case .decrementTapped: state.count -= 1
+case .resetTapped:     state.count = 0
+// Actionを見れば何が起きるか全部わかる
+```
 
 
